@@ -1,0 +1,32 @@
+/* Custom scrollbar for sidebar scroll area */
+.my-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb #111827; /* thumb and track */
+}
+
+/* For Chrome, Edge, and Safari */
+.my-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 4px;
+}
+
+.my-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+/* Sidebar transition for smooth open/close */
+.fixed {
+  transition: width 0.3s;
+}
+
+/* Responsive sidebar for mobile */
+@media (max-width: 768px) {
+  .md\:w-64 {
+    width: 0 !important;
+  }
+}
