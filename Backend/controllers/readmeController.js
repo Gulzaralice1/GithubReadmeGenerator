@@ -26,9 +26,9 @@ const repoInfo = async (req, res) => {
         // };
         // Fetch repository data
         const [repoRes, langRes, contribRes] = await Promise.all([
-            fetch(baseUrl, { headers }),
-            fetch(`${baseUrl}/languages`, { headers }),
-            fetch(`${baseUrl}/contributors`, { headers })
+            fetch(baseUrl),
+            fetch(`${baseUrl}/languages`),
+            fetch(`${baseUrl}/contributors`)
         ]);
 
         if (!repoRes.ok) {
