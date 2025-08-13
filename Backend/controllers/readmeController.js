@@ -19,11 +19,11 @@ const repoInfo = async (req, res) => {
         const baseUrl = `https://api.github.com/repos/${owner}/${repo}`;
         console.log("Base URL:", baseUrl);
 
-        const headers = {
-            "User-Agent": "repo-info-app",
-            "Accept": "application/vnd.github+json",
-            "Authorization": `token ${process.env.GITHUB_TOKEN}`
-        };
+        // const headers = {
+        //     "User-Agent": "repo-info-app",
+        //     "Accept": "application/vnd.github+json",
+        //     "Authorization": `token ${process.env.GITHUB_TOKEN}`
+        // };
         // Fetch repository data
         const [repoRes, langRes, contribRes] = await Promise.all([
             fetch(baseUrl, { headers }),
