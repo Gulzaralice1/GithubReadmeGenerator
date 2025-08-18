@@ -48,7 +48,7 @@ function ChatBody({ searchQuery }) {
 
             try {
                 // searchQuery.trim();
-                const res = await fetch('http://localhost:5000/api/getRepoInfo', {
+                const res = await fetch('http://localhost:5000/api/readme/getRepoInfo', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ repoUrl: searchQuery }),
